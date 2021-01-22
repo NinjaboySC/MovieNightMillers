@@ -2,7 +2,7 @@
 
 movie night millers repository, mod of friday night funkin
 
-developed by MILLERS, inc.
+developed by MILLERS, inc. and
 produced by LAXX CO, R&D.
 
 original git page
