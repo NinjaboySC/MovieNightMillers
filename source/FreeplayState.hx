@@ -54,9 +54,9 @@ class FreeplayState extends MusicBeatState
 
 		if (StoryMenuState.weekUnlocked[3] || isDebug)
 		{
-			songs.push('Pico');
-			songs.push('Philly');
-			songs.push('Blammed');
+			songs.push('Grrben');
+			songs.push('Milly');
+			songs.push('Jewwed');
 		}
 
 		if (StoryMenuState.weekUnlocked[4] || isDebug)
