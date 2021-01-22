@@ -17,25 +17,15 @@ using StringTools;
 class StoryMenuState extends MusicBeatState
 {
 	var scoreText:FlxText;
-	
+
 	var weekData:Array<Dynamic> = [
-		['Tutorial'],
-		['Bopeebo', 'Fresh', 'Dadbattle'],
-		['Spookeez', 'South','Monster'],
-		['Pico', 'Philly', "Blammed"],
-		['Satin-Panties', "High", "Milf"],
-		['Cocoa', 'Eggnog', 'Winter-Horrorland']
-	];
-	
-	var weekDataString:Array<Dynamic> = [
 		['Millertorial'],
 		['Bopeeboof', 'Froof', 'Brickbattle'],
-		['Spookeez', 'South','Nightmare'],
+		['Spookeez', 'South'],
 		['Grrben', 'Milly', "Jewwed"],
 		['Satin-Panties', "High", "Milf"],
 		['Cocoa', 'Eggnog', 'Winter-Horrorland']
 	];
-	
 	var curDifficulty:Int = 1;
 
 	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true];
@@ -394,7 +384,7 @@ class StoryMenuState extends MusicBeatState
 				// grpWeekCharacters.members[0].updateHitbox();
 		}
 
-		var stringThing:Array<String> = weekDataString[curWeek];
+		var stringThing:Array<String> = weekData[curWeek];
 
 		for (i in stringThing)
 		{

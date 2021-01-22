@@ -393,7 +393,7 @@ class PlayState extends MusicBeatState
 				gf.visible = false;
 				if (isStoryMode)
 				{
-					camPos.x += 600;
+					camPos.x += 200;
 					tweenCamIn();
 				}
 
@@ -404,7 +404,7 @@ class PlayState extends MusicBeatState
 			case 'monster-christmas':
 				dad.y += 130;
 			case 'dad':
-				camPos.x += 400;
+				camPos.x += 200;
 			case 'pico':
 				camPos.x += 600;
 				dad.y += 300;

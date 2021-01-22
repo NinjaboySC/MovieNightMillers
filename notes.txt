@@ -1,0 +1,3 @@
+playstate has campositions
+
+character has offset information
