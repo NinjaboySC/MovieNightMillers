@@ -385,7 +385,9 @@ class PlayState extends MusicBeatState
 		add(dad);
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
-
+		
+		trace(camPos.y, " 1");
+		
 		switch (SONG.player2)
 		{
 			case 'gf':
@@ -405,6 +407,7 @@ class PlayState extends MusicBeatState
 				dad.y += 130;
 			case 'dad':
 				camPos.x += 200;
+				dad.y += 20;
 			case 'pico':
 				camPos.x += 600;
 				dad.y += 300;
@@ -456,10 +459,13 @@ class PlayState extends MusicBeatState
 		// add(strumLine);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
-
+		
+		trace(camPos.y, " 2");
+		
 		camFollow.setPosition(camPos.x, camPos.y);
 		add(camFollow);
-
+		trace(camPos.y, " 3");
+		
 		FlxG.camera.follow(camFollow, LOCKON, 0.04);
 		// FlxG.camera.setScrollBounds(0, FlxG.width, 0, FlxG.height);
 		FlxG.camera.zoom = defaultCamZoom;
@@ -989,8 +995,17 @@ class PlayState extends MusicBeatState
 			{
 				camFollow.setPosition(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
 				// camFollow.setPosition(lucky.getMidpoint().x - 120, lucky.getMidpoint().y + 210);
-				if (dad.curCharacter == 'mom')
-					camFollow.y = dad.getMidpoint().y;
+				
+				if (dad.curCharacter == 'dad')
+					{
+						camFollow.y = dad.getMidpoint().y;
+						camFollow.y += 190;
+					}
+					else
+					{
+						camFollow.y = dad.getMidpoint().y;
+					}
+					
 				vocals.volume = 1;
 
 				if (SONG.song.toLowerCase() == 'tutorial')
