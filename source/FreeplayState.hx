@@ -24,6 +24,17 @@ class FreeplayState extends MusicBeatState
 	var diffText:FlxText;
 	var lerpScore:Int = 0;
 	var intendedScore:Int = 0;
+	
+	var songDataString:Array<String> = [
+		"Millertorial",
+		"Bopeeboof", "Froof", "Brickbattle",
+		"Spookeez", "South","Nightmare",
+		"Grrben", "Milly", "Jewwed",
+		"Satin-Panties", "High", "Milf",
+		"Cocoa", "Eggnog", "Winter-Horrorland"
+	];
+	
+	
 
 	private var grpSongs:FlxTypedGroup<Alphabet>;
 	private var curPlaying:Bool = false;
@@ -50,6 +61,7 @@ class FreeplayState extends MusicBeatState
 		{
 			songs.push('Spookeez');
 			songs.push('South');
+			songs.push('Monster');
 		}
 
 		if (StoryMenuState.weekUnlocked[3] || isDebug)
@@ -85,7 +97,7 @@ class FreeplayState extends MusicBeatState
 
 		for (i in 0...songs.length)
 		{
-			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songs[i], true, false);
+			var songText:Alphabet = new Alphabet(0, (70 * i) + 30, songDataString[i], true, false);
 			songText.isMenuItem = true;
 			songText.targetY = i;
 			grpSongs.add(songText);
